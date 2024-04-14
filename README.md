@@ -26,10 +26,10 @@ Defines the environment for running the FTP server, including installing vsftpd,
 Then creates a user account for FTP access, and setting up configurations.
 
 ## How to Setup
-**Step 1.** Create a folder with Dockerfile.
-**Step 2.** Open terminal as Admin.
-**Step 3.** Run `docker build -t ftp-server .` to create the image.
-**Step 4.** Execute `docker run --cap-add=NET_ADMIN -it --name ftp-server-instance ftp-server`.
-**Step 5.** Run `./setup_node.sh`.
-**Step 6.** Connect to the port 7777 of the container via `telnet` to authorize IPs. 
+1. Create a folder with Dockerfile.
+2. Open terminal as Admin.
+3. Run `docker build -t ftp-server .` to create the image.
+4. Execute `docker run --cap-add=NET_ADMIN -it --name ftp-server-instance ftp-server`.
+5. Run `./setup_node.sh`.
+6. Connect to the port 7777 of the container via `telnet` to authorize IPs. 
 
