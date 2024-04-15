@@ -48,4 +48,5 @@ First of all, we shoul know the IP address of our container. To do so, we should
 docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <container_name>
 ```
 
-
+### Connection Test
+For the final connectivity test, we have a `test.sh` script to confirm server access by listing the files in the directory.
