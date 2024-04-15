@@ -33,3 +33,19 @@ Then creates a user account for FTP access, and setting up configurations.
 5. Run `./setup_node.sh`.
 6. Connect to the port 7777 of the container via `telnet` to authorize IPs. 
 
+
+## Project's Workflow
+### `iptables` configuration
+We use the command iptables -L to check the status of iptables immediately after starting the server, enabling us to inspect the current network rules.
+
+### `setup_node.sh`
+After executing `setup_node.sh`, we can see all the modifications made to iptables.
+These changes clearly distinguish between permitted and restricted IPs, representing a substantial enhancement in securing server access.
+
+### `update_iptables.sh`
+First of all, we shoul know the IP address of our container. To do so, we should execute:
+```bash
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <container_name>
+```
+
+
